@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Ramura unde se va declanșa workflow-ul
+      - main # Acest workflow se va rula când faci push pe branch-ul 'main'
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "16" # Poți folosi și altă versiune
+          node-version: "16" # Sau altă versiune suportată de proiectul tău
 
       - name: Install dependencies
         run: npm install
@@ -28,4 +28,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # Folderul unde Vite generează build-ul
+          publish_dir: ./dist # Directorul unde Vite generează build-ul
