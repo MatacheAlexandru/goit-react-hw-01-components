@@ -33,6 +33,15 @@ function App() {
       <div className="w-64 h-32 bg-gray-500 text-center text-white flex justify-center items-center rounded">
         Element cu lățime 64 și înălțime 32
       </div>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-blue-500 text-white">
+        <h1 className="text-4xl font-bold mb-4">Hello Tailwind CSS!</h1>
+        <p className="text-lg mb-4">
+          Aceasta este o aplicație cu stilizări Tailwind.
+        </p>
+        <button className="px-6 py-2 bg-green-500 rounded-lg shadow-lg hover:bg-green-600">
+          Click me!
+        </button>
+      </div>
     </>
   );
 }
