@@ -1,47 +1,33 @@
-import {} from "react";
-
+import Profile from "./components/profile/profile";
+import user from "./user.json";
 import "./App.css";
+import Statistics from "./components/Statistics/Statistics";
+import data from "./data.json";
+import FriendList from "./components/friendList/FriendList";
+import friends from "./friends.json";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
+import transactions from "./transactions.json";
 
 function App() {
   return (
     <>
-      {/* Exemplu 1: Culoare de fundal și text */}
-      <div className="bg-blue-500 text-white p-4 rounded">
-        Acest text are fundal albastru și text alb.
-      </div>
+      {}
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
 
-      {/* Exemplu 2: Margin și Padding */}
-      <div className="m-4 p-6 bg-green-500 text-white rounded">
-        Acest element are margin de 4 și padding de 6.
-      </div>
+      {}
+      <Statistics title="Upload stats" stats={data} />
 
-      {/* Exemplu 3: Flexbox */}
-      <div className="flex justify-center items-center h-32 bg-red-500 rounded">
-        <div className="bg-white text-black p-4 rounded">
-          Element Flexbox centrat
-        </div>
-      </div>
+      {}
+      <FriendList friends={friends} />
 
-      {/* Exemplu 4: Grid */}
-      <div className="grid grid-cols-3 gap-4 m-4">
-        <div className="bg-yellow-500 p-4 rounded">Element Grid 1</div>
-        <div className="bg-purple-500 p-4 rounded">Element Grid 2</div>
-        <div className="bg-teal-500 p-4 rounded">Element Grid 3</div>
-      </div>
-
-      {/* Exemplu 5: Dimensiuni și text */}
-      <div className="w-64 h-32 bg-gray-500 text-center text-white flex justify-center items-center rounded">
-        Element cu lățime 64 și înălțime 32
-      </div>
-      <div className="min-h-screen flex flex-col items-center justify-center bg-blue-500 text-white">
-        <h1 className="text-4xl font-bold mb-4">Hello Tailwind CSS!</h1>
-        <p className="text-lg mb-4">
-          Aceasta este o aplicație cu stilizări Tailwind.
-        </p>
-        <button className="px-6 py-2 bg-green-500 rounded-lg shadow-lg hover:bg-green-600">
-          Click me!
-        </button>
-      </div>
+      {}
+      <TransactionHistory items={transactions} />
     </>
   );
 }
