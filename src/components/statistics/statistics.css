@@ -23,7 +23,7 @@
 }
 
 .item-statstic {
-  flex-basis: calc(20% - 10px);
+  flex-basis: calc(19% - 10px);
   margin: 5px;
   padding: 10px;
   border-radius: 5px;
@@ -32,6 +32,8 @@
 
 .label {
   font-size: 12px;
+  color: #000;
+  padding-right: 0.2rem;
 }
 
 .percentage {
